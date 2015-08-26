@@ -1,0 +1,52 @@
+{
+  "positions" : {
+    "github:9828803" : [ "-JwC_TIZUB61MSKDfxyI", "-JwMvVrvY63xT_jaOCou", "-JwMuIuEfAUsx6jzRjwj", "-JwN2jx9N-HVYluZdw3B", "-JwMuRzg7NJJoH11wSCo", "-JwCZOgIXWQikUdn4O-6", "-JwMu9TqfLIWmV1ejtcV", "-JwNE41xG8YsWB8IeZbE", "-JwNS1zDyXN_3cpHY8zy", "-JxBcygO_zpioKrEPaX0" ]
+  },
+  "songs" : [
+   {
+      "album" : "BRMC",
+      "artist" : "Black Rebel Motorcycle Club",
+      "genre" : "Blues",
+      "media" : "/music/Awake.mp3",
+      "name" : "Awake",
+      "position" : 15,
+      "uid" : "github:9828803"
+    },
+    {
+      "album" : "BRMC",
+      "artist" : "Black Rebel Motorcycle Club",
+      "genre" : "Blues",
+      "media" : "/music/Black%20Rebel%20Motorcycle%20Club/B.R.M.C_/05%20White%20Palms.m4a",
+      "name" : "White Palms",
+      "position" : "2",
+      "uid" : "github:9828803"
+    },
+    {
+      "album" : "Untitled",
+      "artist" : "Phoenix",
+      "genre" : "Pop",
+      "media" : "/music/02%20Too%20Young.mp3",
+      "name" : "Too Young",
+      "position" : "3",
+      "uid" : "github:9828803"
+    },
+    {
+      "album" : "Man On the Moon",
+      "artist" : "KiD CuDi",
+      "genre" : "Hip Hop",
+      "media" : "/music/15%20Up%20Up%20%26%20Away.mp3",
+      "name" : "Up Up and Away",
+      "position" : "4",
+      "uid" : "github:9828803"
+    },
+    {
+      "album" : "Attack and Release",
+      "artist" : "Black Keys",
+      "genre" : "Blues",
+      "media" : "/music/Attack%20and%20Release/02%20I%20Got%20Mine.mp3",
+      "name" : "I Got Mine",
+      "position" : "5",
+      "uid" : "github:9828803"
+    }
+  ]
+}

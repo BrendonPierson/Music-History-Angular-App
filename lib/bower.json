@@ -1,0 +1,16 @@
+{
+  "name": "JS201",
+  "version": "0.0.0",
+  "homepage": "https://github.com/BrendonPierson/JS201",
+  "authors": [
+    "BrendonPierson <brendonpierson@gmail.com>"
+  ],
+  "license": "MIT",
+  "dependencies": {
+    "angular": "~1.4.4",
+    "bootstrap": "~3.3.5",
+    "jquery": "~2.1.4",
+    "lodash": "~3.10.1",
+    "material-design-lite": "~1.0.4"
+  }
+}
