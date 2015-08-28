@@ -47,6 +47,51 @@
       "name" : "I Got Mine",
       "position" : "5",
       "uid" : "github:9828803"
+    },
+    {
+      "album" : "Back In Black",
+      "artist" : "ACDC",
+      "genre" : "Classic Rock",
+      "media" : "/music/06%20Back%20In%20Black.mp3",
+      "name" : "Back In Black",
+      "position" : "6",
+      "uid" : "github:9828803"
+    },
+    {
+      "album" : "Ode To Sunshine",
+      "artist" : "Delta Spirit",
+      "genre" : "Indie",
+      "media" : "/music/Ode%20To%20Sunshine/10%20Ode%20To%20Sunshine.mp3",
+      "name" : "Ode To Sunshine",
+      "position" : "7",
+      "uid" : "github:9828803"
+    },
+    {
+      "album" : "Baby 81",
+      "artist" : "Black Rebel Motorcycle Club",
+      "genre" : "Blues",
+      "media" : "/music/Black%20Rebel%20Motorcycle%20Club/Baby%2081/02%20Berlin.mp3",
+      "name" : "Berlin",
+      "position" : "8",
+      "uid" : "github:9828803"
+    },
+    {
+      "album" : "Born To Run",
+      "artist" : "Bruce Springsteen",
+      "genre" : "Rock",
+      "media" : "/music/05%20Born%20To%20Run.mp3",
+      "name" : "Born To Run",
+      "position" : "9",
+      "uid" : "github:9828803"
+    },
+    {
+      "album" : "Attack and Release",
+      "artist" : "Black Keys",
+      "genre" : "Blues",
+      "media" : "/music/Attack%20and%20Release/05%20Lies.mp3",
+      "name" : "Lies",
+      "position" : "10",
+      "uid" : "github:9828803"
     }
   ]
 }

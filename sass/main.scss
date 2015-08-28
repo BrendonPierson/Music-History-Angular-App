@@ -10,6 +10,15 @@ $borderRadius: 10px;
   -moz-box-shadow: $x $y $blur $spread $color;
   box-shadow: $x $y $blur $spread $color;
 }
+#heightDiv{
+  height: 100%;
+}
+.whiteLink {
+  color: #FFF;
+  &:hover {
+    color: #FFF;
+  }
+}
 
 body {
   font-size: 1.5em;
@@ -22,7 +31,6 @@ body {
 
 html, body{
   width: 100%;
-  min-height: 100%;
   background: rgba(0,0,0, .2); 
   font-weight: 700;
   color: #DDD;
@@ -65,7 +73,6 @@ li:hover {
   padding: 2% 2%;
   @include boxShadow(5px, 5px, 20px, 10px, rgba(0,0,0,0.75));
   background: rgba(0,0,0, .9);
-  height: 100%;
   margin-bottom: 5%;
   h3 {
     text-align: center;
@@ -76,20 +83,20 @@ li:hover {
   button:hover {
     background: rgba(255,255,255, .1);
   }
-  #addNewSong{
-    input {
-      background: rgba(255,255,255, .1);
-      margin: 0 0 5% 0;
-      padding: 1%;
-      border-radius: 10px;
-    }  
-  }
   
   
 }
 
 
 //Song info
+
+#songDetails {
+  background: rgba(0,0,0, .5);
+  text-shadow: 1px 3px 2px #000;
+  &:hover {
+    background: rgba(0,0,0, .9);
+  }
+}
 
 .hidden {
   display: none;
@@ -135,15 +142,35 @@ li:hover {
   border-radius: 20px;
 }
 
+// Form
+
+#addNewSong {
+  padding: 100px 0;
+  background: rgba(0,0,0, .7);
+  border-radius: 20px;
+  text-shadow: 1px 3px 2px #000;
+  // text-align: center;
+  vertical-align: middle;
+  font-size: 1.5em;
+  input {
+    color: #000;
+    border-radius: 10px;
+  }
+  &:hover {
+    background: rgba(0,0,0, .7);
+  }
+
+}
 // media queries //
 @media(min-width: 768px){
-  html { 
-    background: url('https://static.pexels.com/photos/1539/vintage-technology-music-old-large.jpg') no-repeat center center fixed; 
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
-  }
+  // html { 
+  //   background: url('https://static.pexels.com/photos/1539/vintage-technology-music-old-large.jpg') no-repeat center center fixed; 
+  //   -webkit-background-size: cover;
+  //   -moz-background-size: cover;
+  //   -o-background-size: cover;
+  //   background-size: cover;
+  //   min-height: 100%;
+  // }
   body {
     background: url('https://static.pexels.com/photos/1539/vintage-technology-music-old-large.jpg') no-repeat center center fixed; 
     -webkit-background-size: cover;
@@ -151,10 +178,11 @@ li:hover {
     -o-background-size: cover;
     background-size: cover;
     padding: 2.5% 5%;
+    // min-height: 100%;
   }
   #info, #controls {
     border: 1px solid #000;
-    min-height: 100%;
+    // min-height: 100%;
   }
   #info {
     text-align: left;
@@ -189,11 +217,11 @@ li:hover {
     }
   }
 }
-@media(min-width: 1000px){
-  #scrollControls {
-    left: 80px;
-  }
-}
+// @media(min-width: 1000px){
+//   #scrollControls {
+//     left: 80px;
+//   }
+// }
 
 
 

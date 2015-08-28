@@ -1,0 +1,87 @@
+<nav id="nav" class="navbar transparent navbar-inverse">
+  <div id="navContainer" class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="#"><span class="glyphicon glyphicon-music"></span></a>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="#/songs">View Music<span class="sr-only"></span></a></li>
+        <li><a href="#/newsong">Add Music</a></li>
+        <li><a href="#/songs">Profile</a></li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="#" data-toggle="tooltip" data-placement="left" title="Previous Track"><span class="glyphicon glyphicon-fast-backward"></span></a></li>
+        <li><a href="#" data-toggle="tooltip" data-placement="left" title="Play Track"><span class="glyphicon glyphicon-play"></span></a></li>
+        <li><a href="#" data-toggle="tooltip" data-placement="left" title="Pause Track"><span class="glyphicon glyphicon-pause"></span></a></li>
+        <li><a href="#" data-toggle="tooltip" data-placement="left" title="Next Track"><span class="glyphicon glyphicon-fast-forward"></span></a></li>
+      </ul>
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>
+<div class="container"> 
+    <div id="main-wrapper" class="row">
+      <div id="controls" class="col-sm-3">
+        <form>
+          <div class="form-group">
+            
+            <label for="artist">Aritst</label>
+            <select class="form-control" name="artist" 
+              ng-model="selectArtist"
+              ng-options="value.artist for value in songs | unique:'artist' | filter:selectAlbum.album">
+              <option value="">Choose an Artist</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="album">Album</label>
+            <select class="form-control" name="album" 
+              ng-model="selectAlbum"
+              ng-options="value.album for value in songs | unique:'album' | filter:selectArtist.artist">
+              <option value="">Choose an Album</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="genre">Genre</label>
+            <select class="form-control" name="genre" 
+              ng-model="selectGenre"
+              ng-options="value.genre for value in songs | unique:'genre' | filter:selectArtist.artist | filter:selectAlbum">
+              <option value="">Choose a Genre</option>
+            </select>
+          </div>
+          <button type="button" value="filter" class="btn btn-primary btn-lg btn-block" ng-click="clearfilters()">Clear Filters</button>
+        </form>
+      </div>
+ 
+      <div id="info" class="col-sm-8 col-sm-offset-1">
+
+        <ul id="sortable">
+          <li class="ui-state-default" id="{{key}}" value="{{media}}" ng-repeat="song in songs | filter:selectGenre.genre | filter:selectArtist.artist | filter:selectAlbum.album | filter:selectGenre.genre">
+            <div class="row song">
+              <a ng-href="#/songs/{{ song.position }}" class="whiteLink">
+                <h3>{{song.name}}</h3>
+              </a>
+              <div class="row">
+                <p class="col-sm-4">Artist: {{song.artist}}</p>
+                <p class="col-sm-4">Album: {{song.album}}</p>
+                <div class="col-sm-4">
+                  <button type="button" class="btn btn-danger btn-sm" ng-click="deleteSong(song)">Delete Song</button>
+                </div>
+              </div>
+            </div>
+          </li>
+        </ul>
+
+      </div>
+
+    </div>
+  </div>

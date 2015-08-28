@@ -1,41 +1,43 @@
 // This is where all the core logic goes
-app.controller("SongsCtrl", function($scope, $q) {
+app.controller("SongsCtrl", 
+  ["$scope", 
+  "$firebaseArray",
+  "$q", 
+  "simple-storage", 
+  "get-songs",
+  "song-storage",
+  function($scope, $firebaseArray, $q, simple_storage, get_songs, song_storage) {
 
-    $scope.songs = [];
+  $scope.songs = [];
+  $scope.select = '';
 
-  // promises to get songs
-  function getSongsList(path){
-    return $q(function(resolve, reject){
-      $.ajax({
-        url: path
-      })
-      .done(function(response){
-        resolve(response.songs);
-      })
-      .fail(function(xhr, status, error) {
-        reject(error);
+  $scope.newSong = '';
+  $scope.newSong.newTitle = '';
+  $scope.newSong.newArtist = '';
+  $scope.newSong.newAlbum = '';
+  $scope.newSong.newGenre = '';
+
+  var ref = new Firebase("https://nssapp.firebaseio.com/songs");
+  // download the data into a local object
+  $scope.songs = $firebaseArray(ref);
+ 
+
+  // Clear filters function
+  $scope.deleteSong = function(song){
+    if($scope.songs.indexOf(song) !== -1){
+      $scope.songs.$remove(song).then(function(ref){
+        console.log("deleted song: ", ref);
       });
-    });
-  }
+    }
+  };
 
-  // Get the data from two nested ajax promises
-  getSongsList("./data/songs1.json")
-  .then(function(songs){
-    $scope.songs.push(songs);
-    getSongsList("./data/songs2.json")
-    .then(function(songs){
-      $scope.songs.push(songs);
-      $scope.songs = _.flattenDeep($scope.songs);
-      console.log("songs", $scope.songs);
-    },
-    function(error){
-      console.log("error", error);
-    });
-  },
-  function(error){
-    console.log("error", error);
-  });
+  // Reset all of the filters 
+  $scope.clearfilters = function(){
+    $scope.selectArtist = '';
+    $scope.selectAlbum = '';
+    $scope.selectGenre = '';
+  };
 
-});
+}]);
 
 
