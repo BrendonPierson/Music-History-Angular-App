@@ -17,6 +17,7 @@
         <li><a href="#/songs">View Music<span class="sr-only"></span></a></li>
         <li class="active"><a href="#/newsong">Add Music</a></li>
         <li><a href="#/songs">Profile</a></li>
+        <li><a href="#/home">Logout</a></li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
         <li><a href="#" data-toggle="tooltip" data-placement="left" title="Previous Track"><span class="glyphicon glyphicon-fast-backward"></span></a></li>
@@ -29,10 +30,10 @@
 </nav>
 
 
-<div id="addNewSong" class="col-md-6 col-md-offset-3">
-  <div class="container">
+<div id="addNewSong" class="jumbotron">
+  <div class="container-fluid">
     <div clas="row">
-      <div class="col-md-8 col-md-offset-2">
+      <div class="col-sm-6">
 
         <div class="form-group">
           <label for="songName">Song Name</label>
@@ -56,6 +57,21 @@
 
         <button type="button" class="btn btn-primary btn-large" ng-click="addSong()">Add Song</button>
       </div>
+       <div class="col-sm-6" id="search">
+        <div class="input-group">
+          <input id="userSearchInput" type="text" class="form-control" ng-model="searchTrack">
+          <div class="input-group-btn">
+            <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Search for... <span class="caret"></span></button>
+            <ul class="dropdown-menu dropdown-menu-right">
+              <li ng-click="getTrack()">Song</li>
+              <li><a href="#">Artist</a></li>
+              <li><a href="#">Album</a></li>
+              <li role="separator" class="divider"></li>
+              <li><a href="#">All</a></li>
+            </ul>
+          </div><!-- /btn-group -->
+        </div><!-- /input-group -->
+      </div><!-- /.col-lg-6 -->
     </div>
   </div>
 </div>

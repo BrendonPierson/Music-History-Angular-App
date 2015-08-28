@@ -1,0 +1,11 @@
+<div class="jumbotron" id="loginTron">
+  <div ng-show="authData">
+    <p>Hello, {{ authData.github.displayName }}</p>
+    <button type="button" class="btn btn-primary" ng-click="auth.$unauth()">Logout</button>
+    <button type="button" class="btn btn-primary" ng-click="redirect()">View Songs</button>
+  </div>
+  <div ng-hide="authData">
+    <p>Welcome, please log in.</p>
+    <button type="button" class="btn btn-primary" ng-click="auth.$authWithOAuthPopup('github')">Login With Github</button>
+  </div>
+</div>

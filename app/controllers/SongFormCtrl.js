@@ -1,10 +1,9 @@
 app.controller("SongFormCtrl", 
   ["$scope",
-  "$firebaseArray", 
-  "get-songs",
-  "song-storage",
-  function($scope, $firebaseArray, get_songs, song_storage) {
+  "$firebaseArray",
+  function($scope, $firebaseArray) {
 
+    $scope.searchTrack = '';
     $scope.newSong = '';
     $scope.newSong.newTitle = '';
     $scope.newSong.newArtist = '';
@@ -24,10 +23,12 @@ app.controller("SongFormCtrl",
         "artist": $scope.newSong.newArtist,
         "album": $scope.newSong.newAlbum,
         "genre": $scope.newSong.newGenre
+        // "uid": 
       };
       console.log("song to add", songToAdd);
       $scope.ref.$add(songToAdd);
       $scope.newSong = '';
     };
 
+    
 }]);

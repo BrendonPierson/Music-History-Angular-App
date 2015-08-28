@@ -2,11 +2,7 @@
 app.controller("SongsCtrl", 
   ["$scope", 
   "$firebaseArray",
-  "$q", 
-  "simple-storage", 
-  "get-songs",
-  "song-storage",
-  function($scope, $firebaseArray, $q, simple_storage, get_songs, song_storage) {
+  function($scope, $firebaseArray) {
 
   $scope.songs = [];
   $scope.select = '';

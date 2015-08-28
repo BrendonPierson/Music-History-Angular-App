@@ -1,5 +1,5 @@
-#heightDiv {
-  height: 100%; }
+#scrollControls {
+  display: none; }
 
 .whiteLink {
   color: #FFF; }
@@ -19,6 +19,23 @@ html, body {
   font-weight: 700;
   color: #DDD;
   letter-spacing: .2em; }
+
+html {
+  background: url("https://static.pexels.com/photos/1539/vintage-technology-music-old-large.jpg") no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  height: 100%; }
+
+body {
+  background: url("https://static.pexels.com/photos/1539/vintage-technology-music-old-large.jpg") no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  padding: 2.5% 5%;
+  min-height: 100%; }
 
 li:hover {
   background: rgba(255, 255, 255, 0.1); }
@@ -57,7 +74,8 @@ li:hover {
 
 #songDetails {
   background: rgba(0, 0, 0, 0.5);
-  text-shadow: 1px 3px 2px #000; }
+  text-shadow: 1px 3px 2px #000;
+  padding: 2%; }
   #songDetails:hover {
     background: rgba(0, 0, 0, 0.9); }
 
@@ -94,28 +112,22 @@ li:hover {
   border: 1px solid #FFF;
   border-radius: 20px; }
 
-#addNewSong {
-  padding: 100px 0;
+#addNewSong, #loginTron {
+  padding: 5% 0;
   background: rgba(0, 0, 0, 0.7);
   border-radius: 20px;
   text-shadow: 1px 3px 2px #000;
-  vertical-align: middle;
   font-size: 1.5em; }
-  #addNewSong input {
+  #addNewSong input, #loginTron input {
     color: #000;
     border-radius: 10px; }
-  #addNewSong:hover {
+  #addNewSong:hover, #loginTron:hover {
     background: rgba(0, 0, 0, 0.7); }
 
-@media (min-width: 768px) {
-  body {
-    background: url("https://static.pexels.com/photos/1539/vintage-technology-music-old-large.jpg") no-repeat center center fixed;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
-    padding: 2.5% 5%; }
+#search {
+  text-shadow: none; }
 
+@media (min-width: 768px) {
   #info, #controls {
     border: 1px solid #000; }
 
