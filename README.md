@@ -7,9 +7,6 @@ This implements github OAuth login.  Once user is logged in they can see their s
 
 ###Technologies used:
 1. AngularJS
-  *Angular Filter
-  *Angular Routes
-  *Custom Directives
 2. Oauth - Git
 3. Grunt
 4. Firebase
